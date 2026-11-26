@@ -1,0 +1,193 @@
+!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MANISH AI WORK HUB</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+      margin: 0;
+      padding: 15px;
+    }
+    .header {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    .header h1 { margin: 0; font-size: 20px; }
+    .header p { margin: 5px 0 0; font-size: 13px; color: #a8b2d1; }
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      margin-bottom: 15px;
+    }
+    .status { color: #28a745; font-weight: bold; font-size: 14px; }
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      margin: 10px 0;
+      resize: vertical;
+      min-height: 90px;
+    }
+    .main-btn {
+      width: 100%;
+      background-color: #0066ff;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .main-btn:disabled { background-color: #8ab4f8; }
+    .output {
+      margin-top: 15px;
+      padding: 12px;
+      background: #f0f4ff;
+      border-left: 4px solid #0066ff;
+      border-radius: 6px;
+      white-space: pre-wrap;
+      font-size: 14px;
+      line-height: 1.5;
+      display: none;
+    }
+    .idea-item {
+      background: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+    .idea-title {
+      font-weight: bold;
+      font-size: 14px;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+    }
+    .idea-desc {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .mini-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>🚀 MANISH AI WORK HUB</h1>
+    <p>Your Digital Work Assistant (No Key Needed)</p>
+  </div>
+
+  <div class="card">
+    <p style="margin:0 0 8px;">Your personal digital work dashboard.</p>
+    <div class="status">● System Ready (Free AI Active)</div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">🤖 AI Work Assistant</h3>
+    <textarea id="promptInput" placeholder="यहाँ अपना काम लिखें या नीचे से कोई आइडिया चुनें..."></textarea>
+    <button id="runBtn" class="main-btn" onclick="askAI()">AI से काम करवाएं</button>
+    <div id="outputBox" class="output"></div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">🎬 Funny Toon Hub — 5 Viral Shorts Ideas</h3>
+
+    <div class="idea-item">
+      <div class="idea-title">1. पापा का रिमोट और मम्मी की झाड़ू (15s)</div>
+      <div class="idea-desc">बच्चा चुपके से टीवी रिमोट छुपाता है और पापा पर नाम लगा देता है।</div>
+      <button class="mini-btn" onclick="useIdea('Funny Toon Hub के लिए 15 सेकंड की कार्टून स्क्रिप्ट लिखो: बच्चा टीवी का रिमोट छुपाता है और मम्मी के पूछने पर पापा का नाम लगा देता है। मज़ेदार डायलॉग, टाइटल और हैशटैग दो।')">✨ AI से पूरी स्क्रिप्ट लिखें</button>
+    </div>
+
+    <div class="idea-item">
+      <div class="idea-title">2. एग्जाम से 1 रात पहले का कॉन्फिडेंस (20s)</div>
+      <div class="idea-desc">रात 12 बजे बच्चा खुद को टॉपर समझता है, सुबह अलार्म बजते ही उल्टी चप्पल पहनकर भागता है।</div>
+      <button class="mini-btn" onclick="useIdea('Funny Toon Hub के लिए 20 सेकंड की कार्टून स्क्रिप्ट लिखो: एग्जाम से एक रात पहले बच्चा सोचता है सुबह 5 बजे सब पढ़ लूँगा, लेकिन सुबह 8:30 बजे नींद खुलती है। डायलॉग और हैशटैग दो।')">✨ AI से पूरी स्क्रिप्ट लिखें</button>
+    </div>
+
+    <div class="idea-item">
+      <div class="idea-title">3. जब दोस्त कहे "आगे पुलिस नहीं है" (15s)</div>
+      <div class="idea-desc">पीछे बैठा दोस्त कहता है सीधा भगा कोई पुलिस नहीं है, 2 सेकंड बाद सामने 4 पुलिसवाले मिलते हैं।</div>
+      <button class="mini-btn" onclick="useIdea('Funny Toon Hub के लिए 15 सेकंड की कार्टून स्क्रिप्ट लिखो: दो दोस्त बाइक पर जा रहे हैं, पीछे वाला कहता है आगे पुलिस नहीं है और ठीक सामने पुलिस चालान काटने खड़ी मिलती है। डायलॉग और हैशटैग दो।')">✨ AI से पूरी स्क्रिप्ट लिखें</button>
+    </div>
+
+    <div class="idea-item">
+      <div class="idea-title">4. मेहमानों के सामने नमकीन का कटोरा (20s)</div>
+      <div class="idea-desc">मम्मी मेहमानों के लिए काजू-बिस्किट रखती हैं और बच्चा नज़र बचाकर पूरा कटोरा साफ कर देता है।</div>
+      <button class="mini-btn" onclick="useIdea('Funny Toon Hub के लिए 20 सेकंड की कार्टून स्क्रिप्ट लिखो: घर में मेहमान आए हैं, मम्मी काजू-बिस्किट रखकर अंदर जाती हैं और छोटा बच्चा चुपके से सारे काजू खा जाता है। डायलॉग और हैशटैग दो।')">✨ AI से पूरी स्क्रिप्ट लिखें</button>
+    </div>
+
+    <div class="idea-item">
+      <div class="idea-title">5. सुबह 5 बजे जिम जाने का जोश (15s)</div>
+      <div class="idea-desc">रात को लड़का बॉडीबिल्डर बनने के सपने देखता है और सुबह अलार्म बंद करके फिर सो जाता है।</div>
+      <button class="mini-btn" onclick="useIdea('Funny Toon Hub के लिए 15 सेकंड की कार्टून स्क्रिप्ट लिखो: रात को लड़का जिम जाने का जोश दिखाता है लेकिन सुबह 5 बजे का अलार्म बजते ही मोबाइल बंद करके सो जाता है। डायलॉग और हैशटैग दो।')">✨ AI से पूरी स्क्रिप्ट लिखें</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">📋 My Tasks</h3>
+    <p>• Website Design — Active</p>
+    <p>• Video Script — Active</p>
+  </div>
+
+  <script>
+    function useIdea(promptText) {
+      const input = document.getElementById('promptInput');
+      input.value = promptText;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      askAI();
+    }
+
+    async function askAI() {
+      const prompt = document.getElementById('promptInput').value.trim();
+      const outputBox = document.getElementById('outputBox');
+      const runBtn = document.getElementById('runBtn');
+
+      if (!prompt) {
+        alert("कृपया पहले बॉक्स में अपना काम लिखें!");
+        return;
+      }
+
+      runBtn.disabled = true;
+      runBtn.innerText = "⏳ AI सोच रहा है...";
+      outputBox.style.display = "block";
+      outputBox.innerText = "जवाब तैयार हो रहा है, कृपया 3-5 सेकंड रुकें...";
+
+      try {
+        const url = "https://text.pollinations.ai/" + encodeURIComponent(prompt + " (जवाब हिंदी में दें)");
+        const response = await fetch(url);
+        const text = await response.text();
+        outputBox.innerText = text;
+      } catch (error) {
+        outputBox.innerText = "❌ इंटरनेट कनेक्शन चेक करें और दोबारा प्रयास करें।";
+      } finally {
+        runBtn.disabled = false;
+        runBtn.innerText = "AI से काम करवाएं";
+      }
+    }
+  </script>
+
+</body>
+</html>
